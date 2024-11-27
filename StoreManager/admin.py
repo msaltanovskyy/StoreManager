@@ -1,5 +1,12 @@
+from importlib.resources import _
+
 from django.contrib import admin
 from .models import Product, Store, Category, Warehouse, Supplier
+
+
+admin.site.site_header = _('Система для керування магазином')
+admin.site.site_title = _('Система для керування магазином')
+admin.site.index_title = _('Адміністративна панель')
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
